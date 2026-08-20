@@ -1,0 +1,18 @@
+.simple-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: 2rem auto;
+    background-color: #f9f9f9;
+}
+
+.simple-card h2 {
+    margin-top: 0;
+}
+
+.simple-card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}

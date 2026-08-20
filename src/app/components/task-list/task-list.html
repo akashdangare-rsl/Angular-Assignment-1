@@ -1,0 +1,37 @@
+<div class="app">
+    <p class="completed-task-count">Completed Tasks: {{ completedTasks().length }} </p>
+    @if (isLoading()) {
+        <p class="loading-message">Loading tasks...</p>
+    } @else {
+        <main class="task-container">
+            @for (task of tasks(); track task.id) {
+                <div class="task" [class.completed]="task.completed">
+                    <div class="task-header">
+                        <p class="task-id">Task No. {{task.id}}</p>
+                        @switch (task.priority) {
+                            @case ('high') { <span class="badge high">High</span> }
+                            @case ('medium') { <span class="badge medium">Medium</span> }
+                            @case ('low') { <span class="badge low">Low</span> }
+                        }
+                    </div>
+                    <p class="task-title" [routerLink]="['/task', task.id]">{{task.title | titlecase}}</p>
+                    <p class="task-desc">{{task.description | truncate}}</p>
+                    <p class="task-date">Due:  {{task.dueDate | date}}</p>
+                    <button 
+                        class="mark-as-complete-btn"
+                        [class.completed]="task.completed"
+                        (click)="toggleTaskCompletion(task.id)"
+                    >
+                        @if (task.completed) {
+                            Mark as Incomplete
+                        } @else {
+                            Mark as Complete
+                        }
+                    </button>
+                </div>
+            } @empty {
+                <p class="no-tasks-message">No tasks added yet!</p>
+            }
+        </main>
+    }
+</div>
