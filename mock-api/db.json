@@ -1,0 +1,68 @@
+{
+    "tasks": [
+    {
+      "id": 1,
+      "title": "Setup project repository",
+      "description": "Initialize Git repo and push the initial Angular project structure.",
+      "priority": "high",
+      "completed": true,
+      "dueDate": "2026-08-20"
+    },
+    {
+      "id": 2,
+      "title": "Design database schema",
+      "description": "Create ER diagrams for the user, task, and project models.",
+      "priority": "high",
+      "completed": false,
+      "dueDate": "2026-08-22"
+    },
+    {
+      "id": 3,
+      "title": "Implement authentication",
+      "description": "Add login and signup forms with JWT-based authentication.",
+      "priority": "high",
+      "completed": false,
+      "dueDate": "2026-08-25"
+    },
+    {
+      "id": 4,
+      "title": "Create task list UI",
+      "description": "Build the Angular component to display a list of user tasks.",
+      "priority": "medium",
+      "completed": false,
+      "dueDate": "2026-08-23"
+    },
+    {
+      "id": 5,
+      "title": "Write unit tests for task service",
+      "description": "Ensure all CRUD operations for tasks have passing tests.",
+      "priority": "medium",
+      "completed": false,
+      "dueDate": "2026-08-26"
+    },
+    {
+      "id": 6,
+      "title": "Setup CI/CD pipeline",
+      "description": "Configure GitHub Actions to automatically run tests and deploy.",
+      "priority": "medium",
+      "completed": false,
+      "dueDate": "2026-08-28"
+    },
+    {
+      "id": 7,
+      "title": "Review PR #42",
+      "description": "Review the pull request for the new user profile page.",
+      "priority": "low",
+      "completed": false,
+      "dueDate": "2026-08-21"
+    },
+    {
+      "id": 8,
+      "title": "Update documentation",
+      "description": "Add API documentation for the newly created endpoints.",
+      "priority": "low",
+      "completed": false,
+      "dueDate": "2026-08-29"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+@if (task(); as t) {
+    <div class="simple-card">
+        <h2>{{ t.title | titlecase }}</h2>
+        <p><strong>Priority:</strong> {{ t.priority }}</p>
+        <p><strong>Status:</strong> {{ t.completed ? 'Completed' : 'Pending' }}</p>
+        <p><strong>Description:</strong> {{ t.description }}</p>
+        <p><strong>Due Date:</strong> {{ t.dueDate | date }}</p>
+        <button routerLink="/tasks">Back to Tasks</button>
+    </div>
+} @else {
+    <p>Loading task details...</p>
+}
