@@ -14,12 +14,22 @@ export class TaskDetails implements OnInit {
   taskService = inject(TaskService);
   id = input<string>();
   task = signal<Task | null>(null);
+  loading = signal<boolean>(false);
+  isError = signal<boolean>(false);
 
   ngOnInit(): void {
     const taskId = this.id();
     if (taskId) {
-      this.taskService.getTaskById(Number(taskId)).subscribe((task) => {
-        this.task.set(task);
+      this.loading.set(true);
+      this.taskService.getTaskById(Number(taskId)).subscribe({
+        next: (task) => {
+          this.task.set(task)
+          this.loading.set(false);
+        },
+        error: () => {
+          this.isError.set(true);
+          this.loading.set(false);
+        }
       });
     }
   }

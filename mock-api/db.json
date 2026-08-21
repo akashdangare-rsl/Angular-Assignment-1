@@ -61,8 +61,32 @@
       "title": "Update documentation",
       "description": "Add API documentation for the newly created endpoints.",
       "priority": "low",
-      "completed": false,
+      "completed": true,
       "dueDate": "2026-08-29"
+    },
+    {
+      "id": 9,
+      "title": "Optimize application performance",
+      "description": "Audit the bundle size and apply lazy loading where necessary.",
+      "priority": "high",
+      "completed": false,
+      "dueDate": "2026-09-02"
+    },
+    {
+      "id": 10,
+      "title": "Design landing page",
+      "description": "Create wireframes and mockups for the new marketing landing page.",
+      "priority": "medium",
+      "completed": false,
+      "dueDate": "2026-09-05"
+    },
+    {
+      "id": 11,
+      "title": "Fix bug in task creation",
+      "description": "Resolve the issue where due dates are saved incorrectly in certain timezones.",
+      "priority": "high",
+      "completed": true,
+      "dueDate": "2026-08-19"
     }
   ]
 }

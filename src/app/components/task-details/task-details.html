@@ -1,12 +1,19 @@
-@if (task(); as t) {
-    <div class="simple-card">
-        <h2>{{ t.title | titlecase }}</h2>
-        <p><strong>Priority:</strong> {{ t.priority }}</p>
-        <p><strong>Status:</strong> {{ t.completed ? 'Completed' : 'Pending' }}</p>
-        <p><strong>Description:</strong> {{ t.description }}</p>
-        <p><strong>Due Date:</strong> {{ t.dueDate | date }}</p>
-        <button routerLink="/tasks">Back to Tasks</button>
-    </div>
-} @else {
-    <p>Loading task details...</p>
-}
+<div class="simple-card">
+    @if (loading()) {
+        <p class="loading">Loading Task details...</p>
+    } @else if (isError()) {
+        <p class="error">Task details not found!</p>
+    } @else {
+        @if (task(); as t) {
+            <h2>{{ t.title | titlecase }}</h2>
+            <p><strong>Priority:</strong> {{ t.priority }}</p>
+            <p><strong>Status:</strong> {{ t.completed ? 'Completed' : 'Pending' }}</p>
+            <p><strong>Description:</strong> {{ t.description }}</p>
+            <p><strong>Due Date:</strong> {{ t.dueDate | date }}</p>
+            <div class="btn-container">
+                <button routerLink="/tasks">Back to Tasks</button>
+            </div>
+        }
+    }
+</div>
+    
