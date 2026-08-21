@@ -1,5 +1,5 @@
 <div class="app">
-    <p class="completed-task-count">Completed Tasks: {{ completedTasks().length }} </p>
+    <p class="completed-task-count">Completed Tasks: <span class="count">{{ completedTasks().length }} </span></p>
     @if (isLoading()) {
         <p class="loading-message">Loading tasks...</p>
     } @else {

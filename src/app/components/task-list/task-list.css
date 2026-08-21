@@ -1,11 +1,12 @@
 .app {
-  /* width: 90%; */
   margin: 0 auto;
+  padding-bottom: 3rem;
 }
 
 .task-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   padding: 1.5rem;
   max-width: 1200px;
@@ -133,10 +134,20 @@
 }
 
 .completed-task-count {
-  text-align: center;
+  text-align: right;
   padding: 0 1.5rem 0 0;
   font-size: 1.1rem;
   color: #777;
+}
+
+.completed-task-count .count {
+  padding: 0.5rem 1.5rem;
+  background-color: rgb(232, 221, 221);
+  border-radius: 0.5rem;
+  text-align: center;
+  color: black;
+  font-size: large;
+  font-weight: bold;
 }
 
 .task button.mark-as-complete-btn {
